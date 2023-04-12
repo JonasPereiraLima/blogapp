@@ -1,0 +1,26 @@
+<div class="bg-dark text-white p-5 rounded-lg">
+  <h1 class="display-4">Welcome to blog of node!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Create account</a>
+</div>
+
+<hr class="text-white">
+
+<h1 class="text-white">Recent posts</h1>
+
+{{#each postagens}}
+  <div class="card mt-2 bg-dark text-white p-5">
+    <div class="card-body">
+      <h1>Título: {{titulo}}</h1>
+      <p>Descrição: {{descricao}}</p>
+      <a href="/postagem/{{slug}}"><button class="btn btn-success">Exibir postagem</button></a>
+      <hr>
+      <small>Categoria: {{categoria}}</small><br>
+      <small>Data de criação: {{data}}</small>
+    </div>
+  </div>
+{{else}}
+<p>Não há postagens para exibir</p>
+{{/each}}
